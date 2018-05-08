@@ -15,12 +15,12 @@ class CashRegister
   end
 
   def discount
-    self.discount
+    @discount
   end
 
 
   def total
-    self.total
+    @total
   end
 
   def last_transaction
