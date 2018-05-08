@@ -2,16 +2,16 @@
 require 'pry'
 
 class CashRegister
+  
 
 
-
-  attr_accessor :total, :discount, :last_transaction, :cart
+  attr_accessor :total, :discount, :last_transaction
 
 
   def initialize(discount = nil)
     @total = 0
     @discount = discount
-    @cart
+
   end
 
   def discount
@@ -32,7 +32,7 @@ class CashRegister
     self.last_transaction = [price, quantity].compact.inject(:*)
     @total = self.total + self.last_transaction
     if quantity >= 1
-      @cart << title
+      @@items << title
     end
   end
 
@@ -48,7 +48,7 @@ class CashRegister
 
 
   def items
-    @cart
+    @@items
   end
 
 
