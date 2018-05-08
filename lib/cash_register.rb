@@ -39,7 +39,7 @@ class CashRegister
     if @discount == nil
       return "There is no discount to apply."
     else
-      self.last_transaction = self.total - [self.total, @discount, 0.01 ].compact.inject(:*)
+        @total = self.total - [self.total, @discount, 0.01 ].compact.inject(:*)
       return "After the discount, the total comes to $#{@total.to_i}."
     end
   end
