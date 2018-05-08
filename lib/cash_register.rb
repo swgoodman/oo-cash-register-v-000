@@ -16,6 +16,10 @@ class CashRegister
 
   end
 
+  def cart
+    @cart
+  end
+
   def discount
     @discount
   end
