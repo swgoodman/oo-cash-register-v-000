@@ -37,7 +37,11 @@ class CashRegister
   def add_item(title, price, quantity=1)
     self.last_transaction = [price, quantity].compact.inject(:*)
     @total = self.total + self.last_transaction
-    self.cart << title
+    if quantity > 1
+     self.cart.fill(title, self.cart.size, quantity)
+   else
+     self.cart << title
+   end
   end
 
   def items
