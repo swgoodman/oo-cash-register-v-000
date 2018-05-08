@@ -29,9 +29,10 @@ class CashRegister
 
 
   def add_item(title, price, quantity=1)
+    new_items = []
     self.last_transaction = [price, quantity].compact.inject(:*)
     @total = self.total + self.last_transaction
-    @@items << title
+    new_items << title
   end
 
 
