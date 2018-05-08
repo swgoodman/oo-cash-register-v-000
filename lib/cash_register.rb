@@ -36,6 +36,7 @@ class CashRegister
     title.each do |title|
       if quantity >= 1
         @@items << title
+      end
     end
   end
 
