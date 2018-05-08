@@ -47,7 +47,7 @@ class CashRegister
 
 
   def items
-    @@items
+    new_items
   end
 
 
