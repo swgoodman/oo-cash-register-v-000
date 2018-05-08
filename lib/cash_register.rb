@@ -33,7 +33,12 @@ class CashRegister
     @total = self.total + self.last_transaction
     if quantity >= 1
       @@items << title
+      binding.pry
     end
+  end
+
+  def items
+    @@items
   end
 
 
@@ -46,10 +51,6 @@ class CashRegister
     end
   end
 
-
-  def items
-    @@items
-  end
 
 
   def void_last_transaction
