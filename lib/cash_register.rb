@@ -12,6 +12,7 @@ class CashRegister
   def initialize(discount = nil)
     @total = 0
     @discount = discount
+    @cart = []
 
   end
 
@@ -33,10 +34,8 @@ class CashRegister
     @@items = []
     self.last_transaction = [price, quantity].compact.inject(:*)
     @total = self.total + self.last_transaction
-    title.each do |title|
-      if quantity >= 1
-        @@items << title
-      end
+    if quantity >= 1
+      @@items << title
     end
   end
 
