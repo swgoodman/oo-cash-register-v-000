@@ -33,8 +33,9 @@ class CashRegister
     @@items = []
     self.last_transaction = [price, quantity].compact.inject(:*)
     @total = self.total + self.last_transaction
-    if quantity >= 1
-      @@items << title
+    title.each do |title|
+      if quantity >= 1
+        @@items << title
     end
   end
 
