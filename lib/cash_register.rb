@@ -6,7 +6,7 @@ class CashRegister
   @@items = []
   @@items_array = []
 
-  attr_accessor :total, :discount, :last_transaction
+  attr_accessor :total, :discount, :last_transaction :cart
 
 
   def initialize(discount = nil)
